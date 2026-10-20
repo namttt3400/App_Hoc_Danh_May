@@ -1,0 +1,6 @@
+{
+  "name": "Luyện Gõ 10 Ngón Chuẩn",
+  "description": "Ứng dụng học đánh máy 10 ngón chuẩn khoa học từ cơ bản đến nâng cao, mô phỏng bàn phím ảo và ngón tay tương tác, kiểm tra tốc độ WPM và theo dõi tiến trình qua biểu đồ trực quan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
