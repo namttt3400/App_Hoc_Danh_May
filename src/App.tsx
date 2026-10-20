@@ -13,6 +13,8 @@ import { ReflexSprint } from './components/ReflexSprint';
 import { ProgressDashboard } from './components/ProgressDashboard';
 import { PostureGuideModal } from './components/PostureGuideModal';
 import { ResultModal } from './components/ResultModal';
+import { PWAInstallButton } from './components/PWAInstallButton';
+import { OfflineIndicator } from './components/OfflineIndicator';
 import {
   Keyboard,
   Timer,
@@ -259,6 +261,8 @@ export default function App() {
 
         {/* Zone 3: 1 primary action */}
         <div className="flex items-center gap-3 shrink-0">
+          <PWAInstallButton variant="header" />
+
           <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs">
             <Flame className="w-3.5 h-3.5 text-rose-500 fill-rose-500" />
             <span className="font-typing font-bold text-amber-300 tabular-nums">{stats.currentStreakDays}</span>
@@ -376,6 +380,9 @@ export default function App() {
                     <span>Xem hướng dẫn tư thế & gờ nổi</span>
                   </button>
                 </div>
+
+                {/* PWA Install Banner */}
+                <PWAInstallButton variant="banner" />
 
                 {/* Lesson Cards by Chapters */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -583,6 +590,9 @@ export default function App() {
         onNextLesson={handleNextLesson}
         hasNextLesson={hasNextLesson && activeTab === 'lessons'}
       />
+
+      {/* Offline Connectivity Indicator */}
+      <OfflineIndicator />
 
       {/* Clean quiet footer */}
       <footer className="mt-auto py-6 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-500">
